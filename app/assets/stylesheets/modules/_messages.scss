@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: calc(100vh - 230px);
+  display: flex;
+  border-top: double 5px lightgrey;
+  border-bottom: 2px lightgrey;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+}
+
+.header-logo {
+}
+
+.header__ber {
+  height: 100%;
+  width: calc(100% - 420px);
+  display: flex;
+  text-align: center;
+}
+
+.header__ber--left {
+  height: 100%;
+  width: 50%;
+  .post {
+    height: 50px;
+    width: 150px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+}
+
+.header__ber--right {
+  width: 50%;
+  text-align: center;
+}
+
+.left {
+  width: 200px;
+  background-color: green;
+  color: white;
+  border-right: 20px black;
+}
+
+  // .header
+
+  //   .header__Text
+  //     みんなのおすすめプリントで<br>
+  //     楽しくわかりやすい授業を ^_^
+  //     -# %h3.name
+  //       -# = current_user.name
+
+  // .info
+  //   .info__new
+  //     新着
+  //   .info__popular
+  //     人気
+  //   .info__subject
+  //     学年・教科
+
+  .right {
+    width: calc(100vw - 200px);
+    overflow: scroll;
+  }
+
+  .post {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+
+  .post__detail {
+    height: 100%;
+    width: 40%;
+    background-color: lightgrey;
+    }
+
+  .MessageField {
+    height: 100%;
+    width: 60%;
+  }
+  .content_post {
+    height: 100%;
+    width: 100%;
+    // margin: 20px 0;
+    // padding: 30px;
+    // position: relative;
+    color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  }
+
+  // .right
+  // .right__detail
+  //   作者
+  //   - @messages.each do |message|
+  //     %span.name
+  //       = message.name
+  //     <br>
+  //     学年
+  //     %span.grade
+  //       = message.grade
+  //     <br>
+  //     科目
+  //     %span.subject
+  //       = message.subject
+  //     <br>
+  //     題名
+  //     %span.text
+  //       = message.text
+  //     <br>
+  //     詳細
+  //     %span.text
+  //       = message.text
+  // .right__detail--form
+  //   .search--icon
+  //     <i class="fas fa-search"></i>
+  //     <i class="fas fa-file-download"></i>
+
+  // -# .right__pic
+  //       -# = @group.name
+  //     -# .left-2
+  //       -# - @group.users.each do |u|
+  //         -# = u.name
+
+  //   -# .right__pic--right
+  //   -#   .edit
+  //       -# = link_to edit_group_path(@group) do
+  //         edit
+  // .MessageField
+  //   - @messages.each do |message|
+  //     .content_post{style:"background-image:url(#{message.image});"}
+  //       %span.name
+  //         =message.name
+  //       %p= message.text
+
+  // .bottom
+  //   -# = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+  //     .form
+  //       .form_contents
+  //         = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+  //         = f.label :image, class: 'Form__inputImage' do
+  //           = icon('far', 'image', class: 'Form__icon')
+  //           = f.file_field :image, class: 'Hidden'
+  //         = f.submit 'Send', class: 'Form__submit'
+
+
+
+  .footer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-logo {
+    height: 60px;
+    width: 180px;
+    margin: 0 auto;
+  }

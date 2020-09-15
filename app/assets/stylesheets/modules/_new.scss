@@ -1,0 +1,49 @@
+.contents {
+  width: 100vw;
+  color: white;
+  background-color: green;
+}
+
+.container {
+  width: 100%;
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  box-sizing: border-box;
+  background-color: lightyellow;
+  font-family: 'ほのか明朝', serif;
+  display: flex;
+}
+
+.form_box {
+  width: 100%;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.detail-s {
+  margin-bottom: 5px;
+}
+
+.detail-m {
+  // height: ;
+  width: 60%;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.detail-l {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.submit-new {
+  height: 40px;
+  width: 80px;
+  border-radius: 25px;
+  cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.contents {
+  height: 500px;
+  display: flex;
+  overflow: scroll;
+}
+
+.content_show {
+  height: 100%;
+  width: 40%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.more_show {
+  height: 100%;
+  width: 60%;
+  display: block;
+}
+  //   %span= image_tag 'arrow_top.png'
+  //   %ul.more_list
+  //     %li
+  //       = link_to '編集', edit_message_path(@message.id), method: :get
+  //     %li
+  //       = link_to '削除', message_path(@message.id), method: :delete
+  // %p= @message.text
+  // %span.name
+  //   = @message.name
+    

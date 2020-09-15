@@ -1,0 +1,28 @@
+.contents
+  .more_show
+    %span= image_tag 'arrow_top.png'
+    %ul.more_list
+      %li
+        = link_to '編集', edit_message_path(@message.id), method: :get
+      %li
+        = link_to '削除', message_path(@message.id), method: :delete
+    作者
+    %span.name
+      = @message.name
+    <br>
+    学年
+    %span.grade
+      = @message.grade
+    <br>
+    科目
+    %span.subject
+      = @message.subject
+    <br>
+    題名
+    %span.text
+      = @message.text
+    <br>
+    詳細
+    %span.text
+      = @message.text
+  .content_show{style: "background-image: url(#{@message.image});"}

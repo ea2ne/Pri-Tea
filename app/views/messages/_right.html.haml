@@ -1,0 +1,63 @@
+.right
+  .post
+    .post__detail
+      - @messages.each do |message|
+        .more
+          = icon("fas", "book")  
+          %i.fa.fa-cog
+          -# %span=image_tag 'fal fa-list-ul'
+          %span=image_tag 'arrow_top.png'
+          %ul.more_list
+            %li
+              =link_to '詳細', message_path(message.id), method: :get
+              =link_to '編集', edit_message_path(message.id), method: :get
+              =link_to '削除', message_path(message.id), method: :delete
+        作者
+        %span.name
+          = message.name
+        <br>
+        学年
+        %span.grade
+          = message.grade
+        <br>
+        科目
+        %span.subject
+          = message.subject
+        <br>
+        題名
+        %span.text
+          = message.text
+        <br>
+        詳細
+        %span.text
+          = message.text
+        <br>
+    .post__form
+      .search--icon
+        <i class="fas fa-search"></i>
+        <i class="fas fa-file-download"></i>
+
+    -# .right__pic
+          -# = @group.name
+        -# .left-2
+          -# - @group.users.each do |u|
+            -# = u.name
+
+      -# .right__pic--right
+      -#   .edit
+          -# = link_to edit_group_path(@group) do
+            edit
+    .MessageField
+      - @messages.each do |message|
+        .content_post{style:"background-image:url(#{message.image});"}
+
+  .bottom
+    -# = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+      .form
+        .form_contents
+          = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+          = f.label :image, class: 'Form__inputImage' do
+            = icon('far', 'image', class: 'Form__icon')
+            = f.file_field :image, class: 'Hidden'
+          = f.submit 'Send', class: 'Form__submit'
+

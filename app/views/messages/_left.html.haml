@@ -1,0 +1,29 @@
+.left
+  .header__Text
+
+    -# %h3.name
+    -#   = current_user.name
+
+  .info
+    .info__new
+      新着
+    .info__popular
+      人気
+    .info__subject
+      学年・教科<br>
+    .image_test
+      = icon("fas", "book")  
+      -# = fa_icon 'edit'
+      %i.fa.fa-cog
+      = link_to "https://www.facebook.com/", class: "Contents__btn" do
+        = icon('fab', 'facebook-square')
+      aa
+      = link_to "https://www.facebook.com/", class: "Contents__btn" do
+        = icon('fab', 'facebook-square')
+        Facebook
+      = link_to "https://twitter.com/", class: "Contents__btn" do
+        = icon('fab', 'twitter')
+        Twitter
+      = link_to "https://www.instagram.com/", class: "Contents__btn" do
+        = icon('fab', 'instagram')
+        Instagram
