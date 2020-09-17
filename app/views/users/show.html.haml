@@ -1,8 +1,12 @@
-.contents
-  %p
-    = @name
+.mypage
+  %p.show__name
+    = @user
     さんの投稿一覧
-  - @messages.each do |message|
-    .content_post{style: "background-image: url(#{message.image});"}
-      %p= message.text
-      %span.name= message.name
+  .mypage__show
+    .mypage__show--box
+      - @messages.each do |message|
+        %p= message.text
+        %span.grade= message.grade
+        %span.subject= message.subject
+        %span.detail = message.detail
+        .content_post{style: "background-image: url(#{message.image});"}
