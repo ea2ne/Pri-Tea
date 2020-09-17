@@ -28,7 +28,7 @@
               %ul.user__info
                 %li
                   = link_to "ログアウト", destroy_user_session_path,method: :delete, class: "header-post"
-                  = link_to "マイページ","/user/#{current_user.id}", class:"header-post" 
+                  = link_to "マイページ", "/users/#{current_user.id}", class:"header-post" 
                   = link_to "投稿する", new_message_path, class: "header-post"
           - else
             .no_login
