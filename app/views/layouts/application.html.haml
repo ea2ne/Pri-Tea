@@ -23,10 +23,13 @@
         .header__ber--right
           - if user_signed_in?
             .logined
-              %p
-                @user.name
-              = link_to "ログアウト", destroy_user_session_path,method: :delete, class: "header-post"
-              = link_to "投稿する", new_message_path, class: "header-post"
+              %span.current_user
+                = current_user.name
+              %ul.user__info
+                %li
+                  = link_to "ログアウト", destroy_user_session_path,method: :delete, class: "header-post"
+                  = link_to "マイページ","/user/#{current_user.id}", class:"header-post" 
+                  = link_to "投稿する", new_message_path, class: "header-post"
           - else
             .no_login
               = link_to "ログイン", new_user_session_path, class: "header-post"

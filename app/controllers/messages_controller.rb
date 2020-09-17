@@ -33,7 +33,7 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:name, :grade, :subject, :text, :image)
+    params.require(:message).permit(:name, :grade, :subject, :text, :image, :user_id).merge(user_id: current_user.id)
   end
 
   def go_index
@@ -43,8 +43,3 @@ class MessagesController < ApplicationController
   end
 end
 
-# def go_index
-#   unless user_signed_in?
-#     redirect_to action: :index
-#   end
-# end
