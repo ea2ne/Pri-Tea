@@ -10,7 +10,10 @@
           %ul.more_list
             %li
               =link_to '詳細', message_path(message.id), method: :get
+            - if user_signed_in? && current_user.id == message.user_id
+              %li
               =link_to '編集', edit_message_path(message.id), method: :get
+              %li
               =link_to '削除', message_path(message.id), method: :delete
         作者
         %span.name
