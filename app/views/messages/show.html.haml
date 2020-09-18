@@ -2,14 +2,15 @@
   .more_show
     %span= image_tag 'arrow_top.png'
     %ul.more_list
-      %li
-        = link_to '編集', edit_message_path(@message.id), method: :get
-      %li
-        = link_to '削除', message_path(@message.id), method: :delete
+      - if user_signed_in? && current_user.id == @message.user_id
+        %li
+        =link_to '編集', edit_message_path(message.id), method: :get
+        %li
+        =link_to '削除', message_path(message.id), method: :delete
     作者
     %span.name
       %a{href: "users/#{@message.user.id}"}
-        = @message.name
+        = @message.user.name
     <br>
     学年
     %span.grade
@@ -25,5 +26,5 @@
     <br>
     詳細
     %span.text
-      = @message.text
+      = @message.detail
   .content_show{style: "background-image: url(#{@message.image});"}

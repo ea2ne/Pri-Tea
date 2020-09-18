@@ -6,7 +6,6 @@ class CreateMessages < ActiveRecord::Migration[6.0]
       t.string :grade, presence: true
       t.string :subject, presence: true
       t.text :image
-      t.text :detail, presence: true
       t.timestamps
     end
   end
