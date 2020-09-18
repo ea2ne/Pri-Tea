@@ -14,6 +14,7 @@
   justify-content: space-around;
   align-items: center;
   height: 150px;
+  border-bottom: 2px solid lightslategray;  
 }
 
 .header-logo {
@@ -126,7 +127,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     border-radius: 3px;
-    box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+    border-bottom: 2px solid lightslategray;
   }
 
   // .right
