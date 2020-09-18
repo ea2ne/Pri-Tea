@@ -8,7 +8,8 @@
         = link_to '削除', message_path(@message.id), method: :delete
     作者
     %span.name
-      = @message.name
+      %a{href: "users/#{@message.user.id}"}
+        = @message.name
     <br>
     学年
     %span.grade

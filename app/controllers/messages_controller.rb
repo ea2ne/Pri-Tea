@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :go_index, except: [:index, :show]
   
   def index
-    @messages = Message.all
+    @messages = Message.includes(:user)
   end
 
   def new
@@ -33,7 +33,7 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:name, :grade, :subject, :text, :image, :user_id).merge(user_id: current_user.id)
+    params.require(:message).permit(:grade, :subject, :text, :image, :user_id).merge(user_id: current_user.id)
   end
 
   def go_index

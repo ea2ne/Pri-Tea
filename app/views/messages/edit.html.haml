@@ -2,7 +2,6 @@
   .container
     = form_with(model: @message, local: true, class: :form_box) do |form|
       %h3 編集する
-      = form.text_field :name, placeholder: "名前",class: "detail-m"
       = form.text_field :grade, placeholder: "学年", class: "detail-s"
       = form.text_field :subject, placeholder: "科目", class: "detail-s"
       = form.text_field :text, placeholder: "題名", class: "detail-m"
