@@ -35,6 +35,14 @@ class MessagesController < ApplicationController
     @comment = Comment.new
     @comments = @message.comments.includes(:user)
 
+    # このサイトを参考
+    # https://sadah.github.io/rails-training/ja/004_comments.html
+    # @message = Message.includes(:user).find(params[:id])
+    # @comments = @message.comments.includes(:user).all
+    # @comment = @message.comments.build(user_id: current_user.id) if current_user
+
+
+
     # このサイトを見て、参考にしている途中
     # @comment = @message.comments.create(comment.params)
     # https://qiita.com/nojinoji/items/2034764897c6e91ef982
