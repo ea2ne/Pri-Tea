@@ -6,16 +6,23 @@
 
 .content_show {
   height: 100%;
-  width: 50%;
+  width: 60%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
 .more_show {
   height: 100%;
-  width: 50%;
+  width: 40%;
   display: block;
 }
+
+.comments {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+
   //   %span= image_tag 'arrow_top.png'
   //   %ul.more_list
   //     %li

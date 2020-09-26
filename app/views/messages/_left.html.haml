@@ -5,10 +5,10 @@
     -#   = current_user.name
 
   .info
-    -# .search
-    -#   = form_with(url: search_messages_path, local: true, method: :get, class: "search-form") do |form|
-    -#     = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
-    -#     = form.submit "検索", class: "search-btn"
+    .search
+      = form_with(url: messages_path, local: true, method: :get, class: "search-form") do |form|
+        = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
+        = form.submit "検索", class: "search-btn"
     .info__new
       新着
     .info__popular
