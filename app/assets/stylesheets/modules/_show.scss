@@ -20,7 +20,13 @@
 .comments {
   height: 100%;
   width: 80%;
-  margin: 0 auto;
+  margin-left: 10px;
+}
+
+.comment-form {
+  height: 80px;
+  width: 500px;
+  margin-left: 10px;
 }
 
   //   %span= image_tag 'arrow_top.png'

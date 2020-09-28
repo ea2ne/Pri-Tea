@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   resources :messages
   resources :messages do
     resources :comments, only: :create
+    collection do
+      get 'seach'
+    end
   end
   resources :users, only: :show
-
+  
 end
