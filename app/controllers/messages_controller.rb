@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :go_index, except: [:index, :show]
+  before_action :go_index, except: [:index, :show, :search]
   
   def index
     @messages = Message.includes(:user).order("created_at DESC")
@@ -28,30 +28,29 @@ class MessagesController < ApplicationController
   end
 
   def show
-    # コメント機能の実装時にコメントアウト
     @message = Message.find(params[:id])
-
-    # 一時的に消してみる
     @comment = Comment.new
     @comments = @message.comments.includes(:user)
 
-    # このサイトを参考
+    # 参考サイト1
     # https://sadah.github.io/rails-training/ja/004_comments.html
     # @message = Message.includes(:user).find(params[:id])
     # @comments = @message.comments.includes(:user).all
     # @comment = @message.comments.build(user_id: current_user.id) if current_user
 
 
-
-    # このサイトを見て、参考にしている途中
+    # 参考サイト2
     # @comment = @message.comments.create(comment.params)
     # https://qiita.com/nojinoji/items/2034764897c6e91ef982
-    
+  end
+
+  def search
+    @messages = Message.search(params[:keyword])
   end
 
   private
   def message_params
-    params.require(:message).permit(:grade, :subject, :text, :image, :user_id).merge(user_id: current_user.id)
+    params.require(:message).permit(:grade, :subject, :text, :image, :user_id, :detail).merge(user_id: current_user.id)
   end
 
   def go_index
