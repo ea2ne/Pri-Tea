@@ -25,6 +25,7 @@ class MessagesController < ApplicationController
   def update
     message = Message.find(params[:id])
     message = update(message_params)
+    redirect_to action: :go_index
   end
 
   def show
@@ -50,7 +51,7 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:grade, :subject, :text, :image, :user_id, :detail).merge(user_id: current_user.id)
+    params.require(:message).permit(:grade, :subject, :text, :image, :user_id, :detail, :pic).merge(user_id: current_user.id)
   end
 
   def go_index

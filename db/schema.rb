@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_26_082945) do
+ActiveRecord::Schema.define(version: 2020_09_29_102057) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_09_26_082945) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.text "detail"
+    t.binary "pic"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
