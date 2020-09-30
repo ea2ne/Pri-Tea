@@ -4,25 +4,23 @@
       = form_with(url: messages_path, local: true, method: :get, class: "search-form") do |form|
         = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
         = form.submit "検索", class: "search-btn"
-    .info__new
-      新着
+
     .info__popular
-      人気
+      <br>人気
     .info__subject
       学年・教科<br>
     .image_test
       = icon("fas", "book")  
       -# = fa_icon 'edit'
       %i.fa.fa-cog
-      = link_to "https://www.facebook.com/", class: "Contents__btn" do
+      = link_to "https://www.facebook.com/", class: "facebook" do
         = icon('fab', 'facebook-square')
-      aa
-      = link_to "https://www.facebook.com/", class: "Contents__btn" do
+      = link_to "https://www.facebook.com/", class: "facebook" do
         = icon('fab', 'facebook-square')
-        Facebook
-      = link_to "https://twitter.com/", class: "Contents__btn" do
+        Facebook<br>
+      = link_to "https://twitter.com/", class: "twitter" do
         = icon('fab', 'twitter')
-        Twitter
-      = link_to "https://www.instagram.com/", class: "Contents__btn" do
+        Twitter<br>
+      = link_to "https://www.instagram.com/", class: "instagram" do
         = icon('fab', 'instagram')
         Instagram
