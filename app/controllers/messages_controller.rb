@@ -25,7 +25,6 @@ class MessagesController < ApplicationController
   def update
     message = Message.find(params[:id])
     message = update(message_params)
-    redirect_to action: :go_index
   end
 
   def show

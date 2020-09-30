@@ -1,4 +1,4 @@
-.contents
+.content
   .container
     = form_with(model: @message, local: true, class: :form_box) do |f|
       %h3 投稿する
@@ -8,5 +8,4 @@
       = f.text_area :detail, placeholder: "説明", rows: "10", class: "detail-l"
       -# = f.text_field :image, placeholder: "Image Url", class: "text-center", id: "test-id"
       = f.file_field :image, placeholder: "画像ファイルを選択", class: "detail-m"
-      -# = f.file_field :pic, placeholder: "画像ファイルを選択", class: "detail-m"
       = f.submit "送信" ,class: "submit-new"
